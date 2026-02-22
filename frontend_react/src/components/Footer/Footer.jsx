@@ -57,7 +57,7 @@ const Footer = () => {
           whileInView="view"
         >
           <a
-            href="https://www.linkedin.com/in/praveendunga"
+            href="https://www.linkedin.com/in/sandeep-sadasivan"
             target="_blank"
             rel="noreferrer"
             className="app__flex"
@@ -71,7 +71,7 @@ const Footer = () => {
           whileInView="view"
         >
           <a
-            href="https://www.facebook.com/praveenterax"
+            href="https://www.facebook.com/"
             target="_blank"
             rel="noreferrer"
             className="app__flex"
@@ -85,7 +85,7 @@ const Footer = () => {
           whileInView="view"
         >
           <a
-            href="https://www.instagram.com/praveenterax"
+            href="https://www.instagram.com"
             target="_blank"
             rel="noreferrer"
             className="app__flex"

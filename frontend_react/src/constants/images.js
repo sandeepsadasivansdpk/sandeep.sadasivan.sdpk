@@ -23,8 +23,8 @@ import about02 from "../assets/about02.png";
 import about03 from "../assets/about03.png";
 import about04 from "../assets/about04.png";
 import aboutImg from "../assets/aboutImg.svg";
-import aboutmine from "../assets/aboutIMG-my-edit.png";
-import aboutpea from "../assets/aboutIMG-pea.png";
+import aboutmine from "../assets/sandeepsadasivan2025.jpg";
+import aboutpea from "../assets/sandeepsadasivan2025.jpg";
 
 import profile from "../assets/profile.png";
 import programmer from "../assets/programmer.svg";
