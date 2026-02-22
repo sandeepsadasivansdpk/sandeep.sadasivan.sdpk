@@ -1,0 +1,44 @@
+[
+  {
+    "_id": "1",
+    "year": "2023",
+    "works": [
+      {
+        "_id": "1-1",
+        "name": "Senior Developer",
+        "company": "Tech Company",
+        "desc": "Led development of multiple React applications and mentored junior developers."
+      },
+      {
+        "_id": "1-2",
+        "name": "Full Stack Developer",
+        "company": "StartUp Inc",
+        "desc": "Developed and maintained full-stack web applications using MERN stack."
+      }
+    ]
+  },
+  {
+    "_id": "2",
+    "year": "2022",
+    "works": [
+      {
+        "_id": "2-1",
+        "name": "Junior Developer",
+        "company": "Web Solutions",
+        "desc": "Developed React components and fixed bugs in existing applications."
+      }
+    ]
+  },
+  {
+    "_id": "3",
+    "year": "2021",
+    "works": [
+      {
+        "_id": "3-1",
+        "name": "Intern",
+        "company": "Digital Agency",
+        "desc": "Assisted in web development projects and learned modern web technologies."
+      }
+    ]
+  }
+]
