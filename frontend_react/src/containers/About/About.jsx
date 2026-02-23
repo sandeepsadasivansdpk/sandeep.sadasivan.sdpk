@@ -47,11 +47,7 @@ const About = () => {
             className="p-text"
             dangerouslySetInnerHTML={{ __html: aboutMe.description }}
           ></p>
-          <div>
-            <button className="portfolio-button" onClick={viewResumeHandler}>
-              Resume
-            </button>
-          </div>
+          
         </div>
       </div>
 
