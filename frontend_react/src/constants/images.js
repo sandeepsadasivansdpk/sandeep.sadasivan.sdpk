@@ -28,9 +28,11 @@ import aboutpea from "../assets/sandeepsadasivan2025.jpg";
 
 import profile from "../assets/profile.png";
 import programmer from "../assets/programmer.svg";
+import home from "../assets/home.jpg";
 import testimonialBg from "../assets/testimonialBg.png";
 import circle from "../assets/circle.svg";
-import logo from "../assets/logo.png";
+// import logo from "../assets/logo.png";
+import fullstack from "../assets/fullstack.jpg";
 
 import adidas from "../assets/adidas.png";
 import amazon from "../assets/amazon.png";
@@ -39,6 +41,9 @@ import bolt from "../assets/bolt.png";
 import nb from "../assets/nb.png";
 import skype from "../assets/skype.png";
 import spotify from "../assets/spotify.png";
+
+import testimonial01 from "../assets/testimonial1.jpg";
+import testimonial02 from "../assets/testimonial2.jpg";
 
 const images = {
   email,
@@ -71,7 +76,7 @@ const images = {
   programmer,
   testimonialBg,
   circle,
-  logo,
+  // logo,
   adidas,
   amazon,
   asus,
@@ -79,6 +84,10 @@ const images = {
   nb,
   skype,
   spotify,
+  testimonial01,
+  testimonial02,
+  home,
+  fullstack
 };
 
 export default images;

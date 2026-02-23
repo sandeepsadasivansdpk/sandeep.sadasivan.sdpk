@@ -55,7 +55,7 @@ const About = () => {
         </div>
       </div>
 
-      <div className="app__profiles">
+      {/* <div className="app__profiles">
         {abouts.map((about, index) => (
           <motion.div
             whileInView={{ opacity: 1 }}
@@ -74,7 +74,7 @@ const About = () => {
             </h2>
           </motion.div>
         ))}
-      </div>
+      </div> */}
     </>
   );
 };

@@ -21,15 +21,12 @@
 }
 
 .app__about-img {
-  // padding: 0 0 1.2rem 0;
   div {
-    // align-items: flex-start;
     background: linear-gradient(rgba($color: #6b7688, $alpha: 0.35), #fff);
-    width: 200px;
-    height: 200px;
+    width: 300px;
+    height: 350px;
     border-radius: 50%;
     position: relative;
-    // border: 1px solid black;
     img {
       position: absolute;
       bottom: 1.2rem;

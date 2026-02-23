@@ -83,11 +83,13 @@ const Work = () => {
                   touched === index ? "app__work-touched" : ""
                 }`}
               >
-                <a
-                  href={work.projectLink}
-                  target="_blank"
-                  rel="noreferrer"
-                  className={`app__flex ${
+                {/* Conditionally render the project link if it's not "NA" */}
+                {work.projectLink && work.projectLink.toLowerCase() !== "na" && (
+                  <a
+                    href={work.projectLink}
+                    target="_blank"
+                    rel="noreferrer"
+                    className={`app__flex ${
                     work.projectLink.toLowerCase() === "na" ? "none" : ""
                   }`}
                 >
@@ -100,6 +102,9 @@ const Work = () => {
                     <AiFillEye />
                   </motion.div>
                 </a>
+              )}
+              {/* Conditionally render the code link if it's not "NA" */}
+              {work.codeLink && work.codeLink.toLowerCase() !== "na" && (
                 <a
                   href={work.codeLink}
                   target="_blank"
@@ -115,6 +120,7 @@ const Work = () => {
                     <AiFillGithub />
                   </motion.div>
                 </a>
+              )}
               </motion.div>
             </div>
             <div className="app__work-content app__flex">
