@@ -45,18 +45,7 @@ services tailored to the needs of diverse industries and businesses of all sizes
   },
 
 
-  {
-    _id: "4",
-    year: "2020",
-    works: [
-      {
-        _id: "4-1",
-        name: "Deputy Manager - Enterprise sales ",
-        company: "Moglix",
-        desc: "",
-      },
-    ],
-  },
+  
   {
     _id: "5",
     year: "2019",
