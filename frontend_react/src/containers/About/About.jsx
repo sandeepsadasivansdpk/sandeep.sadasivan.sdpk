@@ -42,7 +42,7 @@ const About = () => {
           </div>
         </div>
         <div className="app__about-data app__flex">
-          <h2 className="head-text">About Me</h2>
+          <h2 className="head-text">About Me EDIT TEST</h2>
           <p
             className="p-text"
             dangerouslySetInnerHTML={{ __html: aboutMe.description }}
