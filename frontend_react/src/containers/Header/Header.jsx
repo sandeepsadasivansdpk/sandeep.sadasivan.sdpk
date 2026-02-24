@@ -96,7 +96,7 @@ const Header = () => {
         whileInView={scaleVariants.whileInView}
         className="app__header-circles"
       >
-        {[images.javascript, images.react, images.node].map((circle, index) => (
+        {[images.blowhorn, images.moglix, images.movin].map((circle, index) => (
           <motion.div
             variants={headerSkillVariants}
             whileInView="visible"

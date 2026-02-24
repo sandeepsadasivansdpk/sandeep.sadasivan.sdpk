@@ -3,46 +3,40 @@ import images from "../constants/images";
 const skills = [
   {
     _id: "1",
-    name: "React",
+    name: "movin",
     bgColor: "#edf2f8",
     proficiency: 5,
-    icon: images.react,
+    icon: images.movin,
   },
   {
     _id: "2",
-    name: "JavaScript",
+    name: "blowhorn",
     bgColor: "#edf2f8",
     proficiency: 5,
-    icon: images.javascript,
+    icon: images.blowhorn,
   },
   {
     _id: "3",
-    name: "Node.js",
+    name: "moglix",
     bgColor: "#edf2f8",
     proficiency: 4,
-    icon: images.node,
+    icon: images.moglix,
   },
   {
     _id: "4",
-    name: "Python",
+    name: "fabhotels",
     bgColor: "#edf2f8",
     proficiency: 4,
-    icon: images.python,
+    icon: images.fabhotels,
   },
   {
     _id: "5",
-    name: "MongoDB",
+    name: "royalock",
     bgColor: "#edf2f8",
     proficiency: 4,
-    icon: "/assets/mongodb.png",
+    icon: images.royalock,
   },
-  {
-    _id: "6",
-    name: "CSS",
-    bgColor: "#edf2f8",
-    proficiency: 5,
-    icon: images.css,
-  },
+  
 ];
 
 export default skills;
