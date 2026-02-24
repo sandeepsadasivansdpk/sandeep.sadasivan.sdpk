@@ -1,12 +1,12 @@
 const experiences = [
   {
     _id: "1",
-    year: "2025",
+    year: "2024-2025",
     works: [
       {
         _id: "1-1",
-        name: "Business Growth manager",
-        company: "MOVIN",
+        name: "Business Growth Manager",
+        company: "MOVIN EXPRESS PRIVATE LIMITED ( UPS )",
         desc: `MOVIN is a strategic partnership between UPS, a global logistics leader, and InterGlobe Enterprises, a
 prominent player in India’s travel and hospitality industry, dedicated to delivering efficient and
 dependable logistics solutions across the Indian domestic market.`,
@@ -16,11 +16,11 @@ dependable logistics solutions across the Indian domestic market.`,
   },
   {
     _id: "2",
-    year: "2024",
+    year: "2022-2024",
     works: [
       {
         _id: "2-1",
-        name: "Account Manager Enterprise Sales",
+        name: "Account Manager-Enterprise Sales",
         company: "Blowhorn",
         desc: `Blowhorn is a tech-enabled intra-city logistics company that specializes in same-day deliveries for both businesses and individuals.Through its mobile app and website, Blowhorn seamlessly connects
 customers with mini-truck drivers for sub-two-ton deliveries. The company focuses on delivering
@@ -33,7 +33,7 @@ services tailored to the needs of diverse industries and businesses of all sizes
 
   {
     _id: "3",
-    year: "2022",
+    year: "2020-2022",
     works: [
       {
         _id: "3-1",
@@ -46,21 +46,10 @@ services tailored to the needs of diverse industries and businesses of all sizes
 
 
   
-  {
-    _id: "5",
-    year: "2019",
-    works: [
-      {
-        _id: "5-1",
-        name: "Corporate Sales Manager",
-        company: "FabHotels",
-        desc: "FabHotels is a tech-enabled hospitality company offering affordable, standardised accommodations across 80+ cities in India. Operating on a franchise model, FabHotels partners with selected budget hotels to ensure a consistent guest experience focused on cleanliness, comfort, and quality service. Designed to cater to both business and leisure travelers, FabHotels is a preferred choice for corporate clients, travel management companies (TMCs), and individual guests. With a strong focus on technology, operational excellence, and customer satisfaction, the brand is rapidly expanding its footprint across the Indian hospitality landscape.",
-      },
-    ],
-  },
+  
   {
     _id: "6",
-    year: "2018",
+    year: "2018-2020",
     works: [
       {
         _id: "6-1",
@@ -72,7 +61,7 @@ services tailored to the needs of diverse industries and businesses of all sizes
   },
   {
     _id: "7",
-    year: "2016",
+    year: "2015 - 2018",
     works: [
       {
         _id: "7-1",
@@ -82,18 +71,7 @@ services tailored to the needs of diverse industries and businesses of all sizes
       },
     ],
   },
-  {
-    _id: "8",
-    year: "2015",
-    works: [
-      {
-        _id: "8-1",
-        name: "Business Development Executive",
-        company: "Royaloak Incorporation Pvt. Ltd.",
-        desc: "Managed business development initiatives and built strong client relationships.",
-      },
-    ],
-  },
+  
 ];
 
 export default experiences;
