@@ -37,8 +37,6 @@ const images = {
   graphql,
   javascript,
   node,
-  python,
-  redux,
   typescript,
   about01,
   about02,
