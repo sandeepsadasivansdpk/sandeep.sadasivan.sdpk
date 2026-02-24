@@ -4,7 +4,7 @@ const aboutMe = {
   _id: "aboutme-1",
   profileImg: images.aboutmine,
   description:
-    "Hi! I'm a passionate full-stack developer with expertise in React, Node.js, and MongoDB. I love building beautiful and functional web applications that solve real-world problems.",
+    "Hi! I am an ambitious individual with competent experience of working with clients from different sectors. Have  maximised sales by managing all accounts systematically and logically. Fiercely competitive approach to acquire business, and able to handle complex situations from a strategic and tactical perspective.",
   resume: {
     asset: {
       url: "/assets/resume.pdf",

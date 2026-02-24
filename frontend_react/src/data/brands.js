@@ -3,28 +3,28 @@ import images from "../constants/images";
 const brands = [
   {
     _id: "1",
-    name: "Asus",
-    imgUrl: images.asus,
+    name: "movin",
+    imgUrl: images.movin,
   },
   {
     _id: "2",
-    name: "Adidas",
-    imgUrl: images.adidas,
+    name: "blowhorn",
+    imgUrl: images.blowhorn,
   },
   {
     _id: "3",
-    name: "Amazon",
-    imgUrl: images.amazon,
+    name: "moglix",
+    imgUrl: images.moglix,
   },
   {
     _id: "4",
-    name: "Apple",
-    imgUrl: images.bolt,
+    name: "Fabhotels",
+    imgUrl: images.fabhotels,
   },
   {
     _id: "5",
-    name: "Spotify",
-    imgUrl: images.spotify,
+    name: "Royal Oak",
+    imgUrl: images.royalock,
 
   },
 ];

@@ -41,10 +41,16 @@ import bolt from "../assets/bolt.png";
 import nb from "../assets/nb.png";
 import skype from "../assets/skype.png";
 import spotify from "../assets/spotify.png";
+import movin from "../assets/movin_pic.png";
+import blowhorn from "../assets/blowhorn_bg.png";
+import moglix from "../assets/moglix.png";
+import fabhotels from "../assets/fabhotels.png";
+import royalock from "../assets/royaloak_logo.jpeg";
 
-import testimonial01 from "../assets/testimonial1.jpg";
-import testimonial02 from "../assets/testimonial2.jpg";
-
+import testimonial02 from "../assets/testimonial2.jpeg";
+import testimonial01 from "../assets/testimonial1.jpeg";
+import testimonial03 from "../assets/testimonial3.jpeg";
+import testimonial04 from "../assets/testimonial4.jpeg";
 const images = {
   email,
   mobile,
@@ -86,8 +92,15 @@ const images = {
   spotify,
   testimonial01,
   testimonial02,
+  testimonial03,
   home,
-  fullstack
+  fullstack,
+  movin,
+  blowhorn,
+  moglix,
+  fabhotels,
+  royalock,
+  testimonial04
 };
 
 export default images;
