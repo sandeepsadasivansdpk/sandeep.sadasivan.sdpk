@@ -24,7 +24,7 @@ import movin from "../assets/movin_logo.png";
 import blowhorn from "../assets/blowhorn_bg.png";
 import moglix from "../assets/moglix.png";
 import fabhotels from "../assets/fabhotels.png";
-import royalock from "../assets/royaloak_logo.jpeg";
+import royaloak from "../assets/royaloak_logo.jpeg";
 
 import testimonial02 from "../assets/testimonial2.jpeg";
 import testimonial01 from "../assets/testimonial1.jpeg";
@@ -58,7 +58,7 @@ const images = {
   blowhorn,
   moglix,
   fabhotels,
-  royalock,
+  royaloak,
   testimonial04
 };
 
