@@ -1,8 +1,8 @@
 import React from "react";
-import { Work } from "../containers";
+import { WorkComponent } from "../containers/Work/Work";
 
 const WorkPage = () => {
-  return <Work />;
+  return <WorkComponent isPage={true} />;
 };
 
 export default WorkPage;

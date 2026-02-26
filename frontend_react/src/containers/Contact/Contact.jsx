@@ -5,7 +5,7 @@ import { AppWrap, MotionWrap } from "../../wrapper";
 
 import "./Contact.scss";
 
-const Contact = () => {
+const Contact = ({ isPage = false }) => {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -37,9 +37,11 @@ const Contact = () => {
     };
 
     // Store contact in localStorage
-    const existingContacts = JSON.parse(localStorage.getItem('contacts') || '[]');
+    const existingContacts = JSON.parse(
+      localStorage.getItem("contacts") || "[]",
+    );
     existingContacts.push(contact);
-    localStorage.setItem('contacts', JSON.stringify(existingContacts));
+    localStorage.setItem("contacts", JSON.stringify(existingContacts));
 
     setTimeout(() => {
       setIsLoading(false);
@@ -49,7 +51,12 @@ const Contact = () => {
 
   return (
     <>
-      <h2 className="head-text">
+      <h2
+        className="head-text"
+        style={{
+          paddingTop: isPage ? "6rem" : "0",
+        }}
+      >
         Take a coffee & <span>chat</span> with <span>me</span>
       </h2>
 
@@ -125,9 +132,10 @@ const Contact = () => {
     </>
   );
 };
+export { Contact as ContactComponent };
 
 export default AppWrap(
   MotionWrap(Contact, "app__contact"),
   "contact",
-  "app__whitebg"
+  "app__whitebg",
 );

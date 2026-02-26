@@ -1,15 +1,20 @@
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Tooltip as ReactTooltip } from "react-tooltip";
+import { useNavigate } from "react-router-dom";
 
 import { AppWrap, MotionWrap } from "../../wrapper";
 import { urlFor } from "../../utils";
-import { skills as skillsData, experiences as experiencesData } from "../../data";
+import {
+  skills as skillsData,
+  experiences as experiencesData,
+} from "../../data";
 import "./Skills.scss";
 
-const Skills = () => {
+const Experience = ({ isPage = false }) => {
   const [skills, setSkills] = useState([]);
   const [experience, setExperience] = useState();
+  const navigate = useNavigate();
 
   const skillVariants = {
     view: {
@@ -47,10 +52,19 @@ const Skills = () => {
   }, []);
   return (
     <>
-      <h2 className="head-text">
-        Skills <span>&</span> Experience
+      <h2
+        className="head-text"
+        style={{
+          paddingTop: isPage ? "6rem" : "0",
+        }}
+      >
+        <span>Experience</span>
       </h2>
-      <div className="app__skills-container">
+
+      <div
+        className="app__skills-container"
+        onClick={() => !isPage && navigate("/experiences")}
+      >
         <motion.div className="app__skills-list">
           {skills.map((skill, index) => (
             <motion.div
@@ -94,6 +108,7 @@ const Skills = () => {
                     >
                       <h4 className="bold-text">{work.name}</h4>
                       <p className="p-text">{work.company}</p>
+                      {isPage && <p className="p-text">{work.desc}</p>}
                     </motion.div>
                     <ReactTooltip
                       id={work.name}
@@ -114,8 +129,10 @@ const Skills = () => {
   );
 };
 
+export { Experience as ExperiencesComponent };
+
 export default AppWrap(
-  MotionWrap(Skills, "app__skills"),
+  MotionWrap(Experience, "app__skills"),
   "skills",
-  "app__whitebg"
+  "app__whitebg",
 );

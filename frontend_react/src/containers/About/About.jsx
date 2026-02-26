@@ -3,26 +3,30 @@ import { motion } from "framer-motion";
 
 import { images } from "../../constants";
 import { urlFor } from "../../utils";
-import { abouts as aboutsData, aboutMe as aboutMeData } from "../../data";
+import {
+  aboutTheRoles as aboutTheRolesData,
+  aboutMe as aboutMeData,
+} from "../../data";
 import { AppWrap, MotionWrap } from "../../wrapper";
 import "./About.scss";
 
-const About = () => {
-  const [abouts, setAbouts] = useState([]);
+const About = ({ isPage = false }) => {
+  const [aboutTheRolesData, setAboutTheRoles] = useState([]);
   const [aboutMe, setAboutMe] = useState({});
 
   useEffect(() => {
-    setAbouts(aboutsData);
+    setAboutTheRoles(aboutTheRolesData);
     setAboutMe(aboutMeData);
   }, []);
 
-  const viewResumeHandler = () => {
-    window.open(aboutMe.resume?.asset?.url, "_blank");
-  };
-
   return (
     <>
-      <h2 className="head-text">
+      <h2
+        className="head-text"
+        style={{
+          paddingTop: isPage ? "6rem" : "0",
+        }}
+      >
         I know that <span>Good Design</span>
         <br />
         means <span>Good Business</span>
@@ -47,36 +51,37 @@ const About = () => {
             className="p-text"
             dangerouslySetInnerHTML={{ __html: aboutMe.description }}
           ></p>
-          
+          <div className="app_about"></div>
         </div>
       </div>
-
-      {/* <div className="app__profiles">
-        {abouts.map((about, index) => (
-          <motion.div
-            whileInView={{ opacity: 1 }}
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 1.1 }}
-            transition={{ duration: 0.2, type: "tween" }}
-            className="app__profile-item"
-            key={about.title + index}
-          >
-            <img src={urlFor(about.imgUrl)} alt={about.title} />
-            <h2 className="bold-text" style={{ marginTop: "20px" }}>
-              {about.title}
-            </h2>
-            <h2 className="p-text" style={{ marginTop: "10px" }}>
-              {about.description}
-            </h2>
-          </motion.div>
-        ))}
-      </div> */}
+      {isPage && aboutTheRolesData.length > 0 && (
+        <section className="app__about-roles-section">
+          <h2 className="head-text">About The Roles</h2>
+          <div className="app__about-roles-list">
+            {aboutTheRolesData.map((role) => (
+              <motion.div
+                key={role._id}
+                className="app__about-role-item app__flex"
+                whileInView={{ opacity: 1 }}
+              >
+                <img src={urlFor(role.imgUrl)} alt={role.title} />
+                <div className="app__about-role-text">
+                  <h3 className="bold-text">{role.title}</h3>
+                  <p className="p-text">{role.description}</p>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </section>
+      )}
     </>
   );
 };
 
+export { About as AboutComponent };
+
 export default AppWrap(
   MotionWrap(About, "app__about"),
   "about",
-  "app__whitebg"
+  "app__whitebg",
 );

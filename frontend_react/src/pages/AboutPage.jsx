@@ -1,8 +1,8 @@
 import React from "react";
-import { About } from "../containers";
+import { AboutComponent } from "../containers/About/About";
 
 const AboutPage = () => {
-  return <About />;
+  return <AboutComponent isPage={true} />;
 };
 
 export default AboutPage;

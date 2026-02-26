@@ -5,7 +5,7 @@ import {
   HomePage,
   AboutPage,
   WorkPage,
-  SkillsPage,
+  ExperiencePage,
   TestimonialPage,
   ContactPage,
 } from "./pages";
@@ -21,7 +21,7 @@ const App = () => {
           <Route path="/" element={<HomePage />} />
           <Route path="/about" element={<AboutPage />} />
           <Route path="/work" element={<WorkPage />} />
-          <Route path="/skills" element={<SkillsPage />} />
+          <Route path="/experiences" element={<ExperiencePage />} />
           <Route path="/testimonials" element={<TestimonialPage />} />
           <Route path="/contact" element={<ContactPage />} />
         </Route>

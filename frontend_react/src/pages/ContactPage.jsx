@@ -1,8 +1,8 @@
 import React from "react";
-import { Contact } from "../containers";
+import { ContactComponent } from "../containers/Contact/Contact";
 
 const ContactPage = () => {
-  return <Contact />;
+  return <ContactComponent isPage={true} />;
 };
 
 export default ContactPage;

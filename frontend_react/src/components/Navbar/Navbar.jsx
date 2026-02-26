@@ -4,8 +4,6 @@ import { HiMenuAlt4, HiX } from "react-icons/hi";
 import { motion } from "framer-motion";
 import { NavLink } from "react-router-dom";
 
-import { images } from "../../constants";
-
 import "./Navbar.scss";
 
 const Navbar = () => {
@@ -23,7 +21,7 @@ const Navbar = () => {
   const stickNavBar = () => {
     if (window !== undefined) {
       let windowHeight = window.scrollY;
-      if (windowHeight > 250) {
+      if (windowHeight > 50) {
         setClassFloat("navbar-float");
       } else {
         setClassFloat("");
@@ -34,8 +32,8 @@ const Navbar = () => {
   const navItems = [
     { label: "home", path: "/" },
     { label: "about", path: "/about" },
-    { label: "work", path: "/work" },
-    { label: "skills", path: "/skills" },
+    // { label: "work", path: "/work" },
+    { label: "experiences", path: "/experiences" },
     { label: "testimonials", path: "/testimonials" },
     { label: "contact", path: "/contact" },
   ];
