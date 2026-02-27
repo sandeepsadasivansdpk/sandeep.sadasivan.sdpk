@@ -11,7 +11,7 @@ import { AppWrap, MotionWrap } from "../../wrapper";
 import "./About.scss";
 
 const About = ({ isPage = false }) => {
-  const [aboutTheRolesData, setAboutTheRoles] = useState([]);
+  const [aboutTheRoles, setAboutTheRoles] = useState([]);
   const [aboutMe, setAboutMe] = useState({});
 
   useEffect(() => {
@@ -54,11 +54,11 @@ const About = ({ isPage = false }) => {
           <div className="app_about"></div>
         </div>
       </div>
-      {isPage && aboutTheRolesData.length > 0 && (
+      {isPage && aboutTheRoles.length > 0 && (
         <section className="app__about-roles-section">
           <h2 className="head-text">About The Roles</h2>
           <div className="app__about-roles-list">
-            {aboutTheRolesData.map((role) => (
+            {aboutTheRoles.map((role) => (
               <motion.div
                 key={role._id}
                 className="app__about-role-item app__flex"
