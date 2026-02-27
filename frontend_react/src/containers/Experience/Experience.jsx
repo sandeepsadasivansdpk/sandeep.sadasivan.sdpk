@@ -50,6 +50,10 @@ const Experience = ({ isPage = false }) => {
     setSkills(skillsData.sort((a, b) => b.proficiency - a.proficiency));
     setExperience(experiencesData);
   }, []);
+
+  const handleCompanyImageClick = (url) => {
+    window.open(url, "_blank", "noopener,noreferrer");
+  };
   return (
     <>
       <h2
@@ -61,10 +65,7 @@ const Experience = ({ isPage = false }) => {
         <span>Experience</span>
       </h2>
 
-      <div
-        className="app__skills-container"
-        onClick={() => !isPage && navigate("/experiences")}
-      >
+      <div className="app__skills-container">
         <motion.div className="app__skills-list">
           {skills.map((skill, index) => (
             <motion.div
@@ -74,6 +75,7 @@ const Experience = ({ isPage = false }) => {
               whileTap="tap"
               className="app__skills-item app__flex"
               key={skill.name + "-" + index}
+              onClick={() => handleCompanyImageClick(skill.url)}
             >
               <div
                 className="app__flex"
@@ -105,6 +107,7 @@ const Experience = ({ isPage = false }) => {
                       className="app__skills-exp-work"
                       data-tip
                       data-for={work.name}
+                      onClick={() => !isPage && navigate("/experiences")}
                     >
                       <h4 className="bold-text">{work.name}</h4>
                       <p className="p-text">{work.company}</p>

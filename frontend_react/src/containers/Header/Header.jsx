@@ -1,10 +1,11 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { useTypewriter, Cursor } from "react-simple-typewriter";
 
 import { AppWrap } from "../../wrapper";
 import { images } from "../../constants";
 import "./Header.scss";
+import { skills as skillsData } from "../../data";
 
 const scaleVariants = {
   whileInView: {
@@ -50,6 +51,17 @@ const Header = () => {
     loop: false,
   });
 
+  const [skills, setSkills] = useState([]);
+
+  useEffect(() => {
+    setSkills(
+      skillsData.slice(0, 3).sort((a, b) => b.proficiency - a.proficiency),
+    );
+  }, []);
+
+  const handleCompanyImageClick = (url) => {
+    window.open(url, "_blank", "noopener,noreferrer");
+  };
   return (
     <div className="app__header app__flex">
       <motion.div
@@ -96,7 +108,7 @@ const Header = () => {
         whileInView={scaleVariants.whileInView}
         className="app__header-circles"
       >
-        {[images.blowhorn, images.moglix, images.movin].map((circle, index) => (
+        {skills.map((circle, index) => (
           <motion.div
             variants={headerSkillVariants}
             whileInView="visible"
@@ -106,8 +118,9 @@ const Header = () => {
             dragElastic={0.1}
             className="circle-cmp app__flex"
             key={`circle-${index}`}
+            onClick={() => handleCompanyImageClick(circle.url)}
           >
-            <img src={circle} alt="circle" />
+            <img src={circle.icon} alt="circle" />
           </motion.div>
         ))}
       </motion.div>
