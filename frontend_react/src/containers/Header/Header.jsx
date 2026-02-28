@@ -54,9 +54,7 @@ const Header = () => {
   const [skills, setSkills] = useState([]);
 
   useEffect(() => {
-    setSkills(
-      skillsData.slice(0, 3).sort((a, b) => b.proficiency - a.proficiency),
-    );
+    setSkills(skillsData.sort((a, b) => b.proficiency - a.proficiency));
   }, []);
 
   const handleCompanyImageClick = (url) => {
@@ -80,7 +78,6 @@ const Header = () => {
           <div className="tag-cmp app__flex">
             <p className="p-text">{tagText}</p>
             <Cursor cursorStyle="|" />
-            {/* <p className="p-text">Enthusiast</p> */}
           </div>
         </div>
       </motion.div>

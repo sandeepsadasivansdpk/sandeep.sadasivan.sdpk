@@ -8,6 +8,8 @@ import {
   ExperiencePage,
   TestimonialPage,
   ContactPage,
+  ReflectiveLearningPage,
+  ResearchProjectsPage,
 } from "./pages";
 
 import Layout from "./layouts/Layout";
@@ -24,6 +26,11 @@ const App = () => {
           <Route path="/experiences" element={<ExperiencePage />} />
           <Route path="/testimonials" element={<TestimonialPage />} />
           <Route path="/contact" element={<ContactPage />} />
+          <Route
+            path="/reflective-learning"
+            element={<ReflectiveLearningPage />}
+          />
+          <Route path="/research-projects" element={<ResearchProjectsPage />} />
         </Route>
       </Routes>
     </Router>

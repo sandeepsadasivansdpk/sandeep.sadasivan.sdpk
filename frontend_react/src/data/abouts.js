@@ -22,6 +22,20 @@ const aboutTheRoles = [
       "FabHotels is a tech-enabled hospitality company offering affordable, standardised accommodations across 80+ cities in India. Operating on a franchise model, FabHotels partners with selected budget hotels to ensure a consistent guest experience focused on cleanliness, comfort, and quality service. Designed to cater to both business and leisure travelers, FabHotels is a preferred choice for corporate clients, travel management companies (TMCs), and individual guests. With a strong focus on technology, operational excellence, and customer satisfaction, the brand is rapidly expanding its footprint across the Indian hospitality landscape.",
     imgUrl: images.about03,
   },
+  {
+    _id: "4",
+    title: "Senior Corporate Sales Manager",
+    description:
+      "FabHotels is a tech-enabled hospitality company offering affordable, standardised accommodations across 80+ cities in India. Operating on a franchise model, FabHotels partners with selected budget hotels to ensure a consistent guest experience focused on cleanliness, comfort, and quality service. Designed to cater to both business and leisure travelers, FabHotels is a preferred choice for corporate clients, travel management companies (TMCs), and individual guests. With a strong focus on technology, operational excellence, and customer satisfaction, the brand is rapidly expanding its footprint across the Indian hospitality landscape.",
+    imgUrl: images.about04,
+  },
+  {
+    _id: "5",
+    title: "Senior Corporate Sales Manager",
+    description:
+      "FabHotels is a tech-enabled hospitality company offering affordable, standardised accommodations across 80+ cities in India. Operating on a franchise model, FabHotels partners with selected budget hotels to ensure a consistent guest experience focused on cleanliness, comfort, and quality service. Designed to cater to both business and leisure travelers, FabHotels is a preferred choice for corporate clients, travel management companies (TMCs), and individual guests. With a strong focus on technology, operational excellence, and customer satisfaction, the brand is rapidly expanding its footprint across the Indian hospitality landscape.",
+    imgUrl: images.about01,
+  },
 ];
 
 export default aboutTheRoles;

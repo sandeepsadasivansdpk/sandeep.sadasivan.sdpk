@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
+import { BsLinkedin } from "react-icons/bs";
+import { NavLink } from "react-router-dom";
 
 import { images } from "../../constants";
 import { urlFor } from "../../utils";
@@ -51,7 +53,40 @@ const About = ({ isPage = false }) => {
             className="p-text"
             dangerouslySetInnerHTML={{ __html: aboutMe.description }}
           ></p>
-          <div className="app_about"></div>
+          {!isPage && (
+            <p className="p-text" style={{ marginTop: "1rem" }}>
+              Read more about me in <NavLink to="/about">here</NavLink>.
+            </p>
+          )}
+          {isPage && (
+            <div className="app_about app__flex">
+              <p className="p-text" style={{ marginTop: "1rem" }}>
+                To know more about me, please visit my{" "}
+                <a
+                  href="https://www.linkedin.com/in/sandeep-sadasivan/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  LinkedIn
+                </a>{" "}
+                profile.
+              </p>
+
+              <a
+                href="https://www.linkedin.com/in/sandeep-sadasivan/"
+                target="_blank"
+                rel="noreferrer"
+                className="app__flex head-text"
+                style={{
+                  marginTop: "1rem",
+                  marginLeft: "1rem",
+                  fontSize: "2rem",
+                }}
+              >
+                <BsLinkedin style={{ color: "#0A66C2" }} />
+              </a>
+            </div>
+          )}
         </div>
       </div>
       {isPage && aboutTheRoles.length > 0 && (
