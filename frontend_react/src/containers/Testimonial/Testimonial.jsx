@@ -4,7 +4,10 @@ import { HiChevronLeft, HiChevronRight } from "react-icons/hi";
 
 import { AppWrap, MotionWrap } from "../../wrapper";
 import { urlFor } from "../../utils";
-import { testimonials as testimonialsData, brands as brandsData } from "../../data";
+import {
+  testimonials as testimonialsData,
+  skills as brandsData,
+} from "../../data";
 import "./Testimonial.scss";
 
 const Testimonial = () => {
@@ -22,6 +25,10 @@ const Testimonial = () => {
   };
 
   const test = testimonials[currentIndex];
+
+  const handleCompanyImageClick = (url) => {
+    window.open(url, "_blank", "noopener,noreferrer");
+  };
 
   return (
     <>
@@ -48,7 +55,7 @@ const Testimonial = () => {
                 handleClick(
                   currentIndex === 0
                     ? testimonials.length - 1
-                    : currentIndex - 1
+                    : currentIndex - 1,
                 )
               }
             >
@@ -60,7 +67,7 @@ const Testimonial = () => {
                 handleClick(
                   currentIndex === testimonials.length - 1
                     ? 0
-                    : currentIndex + 1
+                    : currentIndex + 1,
                 )
               }
             >
@@ -76,8 +83,9 @@ const Testimonial = () => {
             whileInView={{ opacity: [0, 1] }}
             transition={{ duration: 0.5, type: "tween" }}
             key={brand._id}
+            onClick={() => handleCompanyImageClick(brand.url)}
           >
-            <img src={urlFor(brand.imgUrl)} alt={brand.name} />
+            <img src={urlFor(brand.icon)} alt={brand.name} />
           </motion.div>
         ))}
       </div>
@@ -88,5 +96,5 @@ const Testimonial = () => {
 export default AppWrap(
   MotionWrap(Testimonial, "app__testimonial"),
   "testimonials",
-  "app__primarybg"
+  "app__primarybg",
 );

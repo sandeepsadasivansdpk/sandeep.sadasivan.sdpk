@@ -103,12 +103,12 @@
   align-items: flex-start;
   height: 100%;
   margin-left: 1rem;
-  cursor: pointer;
 
   div {
     width: 100px;
     height: 100px;
     border-radius: 50%;
+    cursor: pointer;
 
     background-color: var(--white-color);
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);

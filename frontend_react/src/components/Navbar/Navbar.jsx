@@ -35,7 +35,7 @@ const Navbar = () => {
     // { label: "work", path: "/work" },
     { label: "experiences", path: "/experiences" },
     { label: "testimonials", path: "/testimonials" },
-    { label: "contact", path: "/contact" },
+    // { label: "contact", path: "/contact" },
   ];
 
   return (
