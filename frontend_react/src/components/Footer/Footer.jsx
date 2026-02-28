@@ -65,34 +65,6 @@ const Footer = () => {
             <GrLinkedinOption />
           </a>
         </motion.div>
-        <motion.div
-          className="app__flex"
-          variants={childSocialVariant}
-          whileInView="view"
-        >
-          <a
-            href="https://www.facebook.com/"
-            target="_blank"
-            rel="noreferrer"
-            className="app__flex"
-          >
-            <FaFacebookF />
-          </a>
-        </motion.div>
-        <motion.div
-          className="app__flex"
-          variants={childSocialVariant}
-          whileInView="view"
-        >
-          <a
-            href="https://www.instagram.com"
-            target="_blank"
-            rel="noreferrer"
-            className="app__flex"
-          >
-            <BsInstagram />
-          </a>
-        </motion.div>
       </motion.div>
       <motion.div
         className="app__footer-copyrights"

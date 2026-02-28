@@ -16,26 +16,6 @@ const SocialMedia = () => {
           <BsLinkedin />
         </a>
       </div>
-      <div>
-        <a
-          href="https://www.facebook.com"
-          target="_blank"
-          rel="noreferrer"
-          className="app__flex"
-        >
-          <FaFacebookF />
-        </a>
-      </div>
-      <div>
-        <a
-          href="https://www.instagram.com"
-          target="_blank"
-          rel="noreferrer"
-          className="app__flex"
-        >
-          <BsInstagram />
-        </a>
-      </div>
     </div>
   );
 };
