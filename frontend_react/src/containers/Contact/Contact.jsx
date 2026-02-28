@@ -36,7 +36,6 @@ const Contact = ({ isPage = false }) => {
       timestamp: new Date().toISOString(),
     };
 
-    // Store contact in localStorage
     const existingContacts = JSON.parse(
       localStorage.getItem("contacts") || "[]",
     );

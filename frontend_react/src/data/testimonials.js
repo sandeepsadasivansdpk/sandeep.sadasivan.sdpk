@@ -1,7 +1,6 @@
 import { images } from "../constants";
 
 const testimonials = [
-  
   {
     _id: "1",
     name: "Shalini Singh",

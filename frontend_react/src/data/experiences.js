@@ -43,10 +43,6 @@ services tailored to the needs of diverse industries and businesses of all sizes
       },
     ],
   },
-
-
-  
-  
   {
     _id: "6",
     year: "2018-2020",

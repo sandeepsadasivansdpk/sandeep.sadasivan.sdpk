@@ -10,13 +10,11 @@ const AppWrap = (Component, idName, classNames) =>
 
     return (
       <div id={idName} className={`app__container ${classNames}`}>
-
         <div className="app__wrapper app__flex">
           <Component />
         </div>
 
         {!isRootPath && <SocialMedia />}
-        {/* <NavigationDots active={idName} /> */}
       </div>
     );
   };

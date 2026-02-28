@@ -37,15 +37,10 @@ const Navbar = () => {
     { label: "testimonials", path: "/testimonials" },
     { label: "reflective learning", path: "/reflective-learning" },
     { label: "research / projects", path: "/research-projects" },
-
-    // { label: "contact", path: "/contact" },
   ];
 
   return (
     <nav className={`app__navbar ${classFloat}`}>
-      <div className="app__navbar-logo">
-        {/* <img src={images.logo} alt="logo" /> */}
-      </div>
       <ul className="app__navbar-links">
         {navItems.map((item) => (
           <li key={`link-${item.label}`} className="app__flex p-text">

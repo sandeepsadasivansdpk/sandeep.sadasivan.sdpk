@@ -5,10 +5,6 @@
   align-items: center;
 
   padding: 1rem 2rem;
-  // background-color: rgba($color: #ffffff, $alpha: 0.25);
-  // backdrop-filter: blur(4px);
-  // -webkit-backdrop-filter: blur(4px);
-  // border: 1px solid rgba($color: #ffffff, $alpha: 0.18);
 
   position: fixed;
   z-index: 2;
@@ -29,7 +25,6 @@
   img {
     width: 90px;
     height: 20px;
-    // object-fit: scale-down;
   }
 
   @media screen and (min-width: 2000px) {
@@ -49,11 +44,9 @@
   li {
     margin: 0 1rem;
     cursor: pointer;
-    // height: 10px;
 
     a {
       color: var(--gray-color);
-      // flex-direction: column;
       margin: 5px 0;
       text-decoration: none;
       text-transform: uppercase;

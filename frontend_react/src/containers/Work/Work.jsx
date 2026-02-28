@@ -88,7 +88,6 @@ const Work = ({ isPage = false }) => {
                   touched === index ? "app__work-touched" : ""
                 }`}
               >
-                {/* Conditionally render the project link if it's not "NA" */}
                 {work.projectLink &&
                   work.projectLink.toLowerCase() !== "na" && (
                     <a
@@ -109,7 +108,6 @@ const Work = ({ isPage = false }) => {
                       </motion.div>
                     </a>
                   )}
-                {/* Conditionally render the code link if it's not "NA" */}
                 {work.codeLink && work.codeLink.toLowerCase() !== "na" && (
                   <a
                     href={work.codeLink}
