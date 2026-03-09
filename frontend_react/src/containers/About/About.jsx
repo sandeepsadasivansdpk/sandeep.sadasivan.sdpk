@@ -5,6 +5,11 @@ import { NavLink } from "react-router-dom";
 
 import { images } from "../../constants";
 import { urlFor } from "../../utils";
+
+import { Skills } from "../../containers";
+import { Testimonial } from "../../containers";
+import { Contact } from "../../containers";
+
 import {
   aboutTheRoles as aboutTheRolesData,
   aboutMe as aboutMeData,
@@ -89,7 +94,7 @@ const About = ({ isPage = false }) => {
           )}
         </div>
       </div>
-      {isPage && aboutTheRoles.length > 0 && (
+      {isPage && aboutTheRoles.length > 0 && false && (
         <section className="app__about-roles-section">
           <h2 className="head-text">About The Roles</h2>
           <div className="app__about-roles-list">
@@ -109,6 +114,10 @@ const About = ({ isPage = false }) => {
           </div>
         </section>
       )}
+
+      <Skills />
+      <Testimonial />
+      <Contact />
     </>
   );
 };

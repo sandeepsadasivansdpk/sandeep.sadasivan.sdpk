@@ -10,6 +10,7 @@ import {
   ContactPage,
   ReflectiveLearningPage,
   ResearchProjectsPage,
+  ProfessionalDevelopmentPage,
 } from "./pages";
 
 import Layout from "./layouts/Layout";
@@ -20,8 +21,8 @@ const App = () => {
     <Router>
       <Routes>
         <Route element={<Layout />}>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/about" element={<AboutPage />} />
+          {/* <Route path="/" element={<HomePage />} /> */}
+          <Route path="/" element={<AboutPage />} />
           <Route path="/work" element={<WorkPage />} />
           <Route path="/experiences" element={<ExperiencePage />} />
           <Route path="/testimonials" element={<TestimonialPage />} />
@@ -31,6 +32,10 @@ const App = () => {
             element={<ReflectiveLearningPage />}
           />
           <Route path="/research-projects" element={<ResearchProjectsPage />} />
+          <Route
+            path="/professional-development"
+            element={<ProfessionalDevelopmentPage />}
+          />
         </Route>
       </Routes>
     </Router>

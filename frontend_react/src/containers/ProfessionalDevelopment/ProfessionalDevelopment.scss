@@ -1,0 +1,95 @@
+.app__pd-container {
+  width: 100%;
+  margin-top: 2rem;
+  padding: 1rem;
+}
+
+.app__pd-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin: 2rem;
+
+  h3 {
+    margin-bottom: 1rem;
+  }
+
+  p {
+    text-align: justify;
+    font-size: 1rem;
+  }
+}
+
+.app__pd-details {
+  ul {
+    list-style: disc;
+    margin-left: 2rem;
+    line-height: 1.8;
+
+    li {
+      margin-bottom: 0.5rem;
+      text-align: justify;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    ul {
+      margin-left: 1rem;
+      font-size: 0.9rem;
+    }
+  }
+}
+
+.app__pd-courses,
+.app__pd-workshops {
+  .app__pd-courses-list,
+  .app__pd-workshops-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .app__pd-course-item,
+  .app__pd-workshop-item {
+    background: var(--white-color);
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    }
+
+    h4 {
+      margin-bottom: 0.5rem;
+      color: var(--secondary-color);
+    }
+
+    .app__pd-provider {
+      font-weight: 600;
+      color: var(--primary-color);
+    }
+
+    p {
+      margin: 0.5rem 0;
+      text-align: left;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    .app__pd-course-item,
+    .app__pd-workshop-item {
+      padding: 1rem;
+
+      h4 {
+        font-size: 1rem;
+      }
+
+      p {
+        font-size: 0.9rem;
+      }
+    }
+  }
+}

@@ -7,6 +7,7 @@ import testimonials from "./testimonials";
 import brands from "./brands";
 import researchProjects from "./researchProjects";
 import reflectiveLearning from "./reflectiveLearning";
+import professionalDevelopment from "./professionalDevelopment";
 
 export {
   skills,
@@ -18,4 +19,5 @@ export {
   brands,
   researchProjects,
   reflectiveLearning,
+  professionalDevelopment,
 };
