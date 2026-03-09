@@ -9,6 +9,7 @@
   flex-direction: column;
   gap: 2rem;
   margin: 2rem;
+  margin-top: 0;
 
   h3 {
     margin-bottom: 1rem;
@@ -89,6 +90,88 @@
 
       p {
         font-size: 0.9rem;
+      }
+    }
+  }
+}
+
+.app__pd-resume {
+  text-align: center;
+
+  p {
+    margin-bottom: 2rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .app__pd-cv-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .app__pd-cv-button {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background: var(--primary-color);
+    color: var(--white-color);
+    border-radius: 0.5rem;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border: 2px solid var(--primary-color);
+    cursor: pointer;
+
+    &:hover {
+      background: transparent;
+      color: var(--primary-color);
+      transform: translateY(-3px);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+  }
+
+  .app__pd-cv-download {
+    background: var(--secondary-color);
+    border-color: var(--secondary-color);
+
+    &:hover {
+      background: transparent;
+      color: var(--secondary-color);
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    .app__pd-cv-buttons {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .app__pd-cv-button {
+      width: 200px;
+      text-align: center;
+    }
+  }
+
+  .app__pd-resume-preview {
+    margin-top: 2rem;
+    width: 100%;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+
+    iframe {
+      width: 100%;
+      height: 600px;
+      border: 1px solid #ddd;
+      border-radius: 0.5rem;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    @media screen and (max-width: 768px) {
+      iframe {
+        height: 400px;
       }
     }
   }
