@@ -29,15 +29,49 @@ const ResearchProjects = ({ isPage = false }) => {
               transition={{ duration: 0.5, delay: index * 0.1 }}
             >
               <h3 className="bold-text">{project.title}</h3>
-              <p className="p-text">{project.description}</p>
+              <p style={{ marginLeft: "1rem" }}>
+                {project.works.map((work, workIndex) => (
+                  <React.Fragment key={workIndex}>
+                    <p
+                      className="p-text bold-text"
+                      dangerouslySetInnerHTML={{ __html: work.subTitle }}
+                    />
+                    <p
+                      className="p-text"
+                      dangerouslySetInnerHTML={{ __html: work.description }}
+                    />
+
+                    {work.descriptionList && (
+                      <ul
+                        className="p-text"
+                        style={{ marginLeft: "2rem", marginBottom: "1rem" }}
+                      >
+                        {work.descriptionList.map((item, itemIndex) => (
+                          <li key={itemIndex} className="p-text">
+                            {item}
+                          </li>
+                        ))}
+                      </ul>
+                    )}
+                  </React.Fragment>
+                ))}
+              </p>
+
               {isPage && (
                 <div className="app__research-skills">
                   <p className="p-text bold-text">Key Areas:</p>
                   <div className="app__research-tags">
                     {project.skills.map((skill) => (
-                      <span key={skill} className="app__research-tag p-text">
-                        {skill}
-                      </span>
+                      <React.Fragment key={skill.name}>
+                        <p>
+                          <span className="app__research-tag p-text">
+                            {skill.name}
+                          </span>
+                          <p className="p-text" style={{ marginTop: "1rem" }}>
+                            {skill.description}
+                          </p>
+                        </p>
+                      </React.Fragment>
                     ))}
                   </div>
                 </div>
