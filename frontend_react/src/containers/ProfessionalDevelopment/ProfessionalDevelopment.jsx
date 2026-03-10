@@ -69,19 +69,6 @@ const ProfessionalDevelopment = ({ isPage = false }) => {
             <>
               <motion.div
                 whileInView={{ opacity: [0, 1] }}
-                transition={{ duration: 1, delay: 0.2 }}
-                className="app__pd-details"
-              >
-                <h3 className="bold-text">Key Development Areas</h3>
-                <ul className="p-text">
-                  {pdData.keyAreas.map((area) => (
-                    <li key={area}>{area}</li>
-                  ))}
-                </ul>
-              </motion.div>
-
-              <motion.div
-                whileInView={{ opacity: [0, 1] }}
                 transition={{ duration: 1, delay: 0.4 }}
                 className="app__pd-courses"
               >

@@ -34,12 +34,12 @@ const About = ({ isPage = false }) => {
           paddingTop: isPage ? "6rem" : "0",
         }}
       >
-        Professional passionate about building <span>strategic partnerships</span>
+        passionate about building <span>strategic partnerships</span>
         <br />
         and delivering sustainable <span>business growth</span>
       </h2>
 
-      <div className="app__about-context app__flex">
+      <div className="app__about-context">
         <div className="app__about-img app__flex">
           <div className="app__flex">
             <img
@@ -115,26 +115,48 @@ const About = ({ isPage = false }) => {
               >
                 Self Evaluation
               </h2>
-              <ul className="p-text">
-                {aboutMe.selfEvaluation.strengths.map((strength) => (
-                  <li key={strength}>
-                    <p className="p-text">{strength}</p>
-                  </li>
-                ))}
-              </ul>
-              <h2
-                className="head-text"
-                style={{ textAlign: "left", marginTop: "2rem" }}
-              >
-                Areas of Development
-              </h2>
-              <ul className="p-text">
-                {aboutMe.selfEvaluation.areasOfDevelopment.map((area) => (
-                  <li key={area}>
-                    <p className="p-text">{area}</p>
-                  </li>
-                ))}
-              </ul>
+              <p
+                className="p-text"
+                dangerouslySetInnerHTML={{
+                  __html: aboutMe.selfEvaluation.content,
+                }}
+              ></p>
+              <p style={{ marginLeft: "2rem" }}>
+                <h2
+                  className="head-text"
+                  style={{
+                    textAlign: "left",
+                    marginTop: "2rem",
+                    fontSize: "1rem",
+                  }}
+                >
+                  Strengths
+                </h2>
+                <ul className="p-text">
+                  {aboutMe.selfEvaluation.strengths.map((strength) => (
+                    <li key={strength}>
+                      <p className="p-text">{strength}</p>
+                    </li>
+                  ))}
+                </ul>
+                <h2
+                  className="head-text"
+                  style={{
+                    textAlign: "left",
+                    marginTop: "2rem",
+                    fontSize: "1rem",
+                  }}
+                >
+                  Areas of Development
+                </h2>
+                <ul className="p-text">
+                  {aboutMe.selfEvaluation.areasOfDevelopment.map((area) => (
+                    <li key={area}>
+                      <p className="p-text">{area}</p>
+                    </li>
+                  ))}
+                </ul>
+              </p>
             </motion.div>
           )}
         </div>
