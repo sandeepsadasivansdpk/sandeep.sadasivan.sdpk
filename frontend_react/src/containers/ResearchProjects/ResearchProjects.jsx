@@ -53,6 +53,20 @@ const ResearchProjects = ({ isPage = false }) => {
                         ))}
                       </ul>
                     )}
+
+                    {work.descriptionOrderedList && (
+                      <ol
+                        className="p-text"
+                        style={{ marginLeft: "2rem", marginBottom: "1rem" }}
+                      >
+                        {work.descriptionOrderedList.map((item, itemIndex) => (
+                          <li key={itemIndex} className="p-text">
+                            <p className="bold-text">{item.step}</p>
+                            <p className="p-text">{item.details}</p>
+                          </li>
+                        ))}
+                      </ol>
+                    )}
                   </React.Fragment>
                 ))}
               </p>
