@@ -1,65 +1,129 @@
 const researchProjects = [
   {
     _id: "1",
-    title:
-      "Vendor Managed Inventory (VMI) Implementation for Volvo Construction Equipment",
+    title: "Supply Chain Optimisation",
     works: [
       {
         subTitle: "Project Context and Challenge",
         description:
-          "During my tenure as Key Account Manager – Enterprise Sales at Moglix, I led a strategic project to implement a Vendor Managed Inventory (VMI) system for Maintenance, Repair, and Operations (MRO) consumables at the Volvo Construction Equipment manufacturing plant in Bangalore, India. <br/><br/> The client faced operational inefficiencies in managing their MRO procurement process. The existing system involved multiple suppliers, manual ordering processes, and fragmented inventory management, which often resulted in procurement delays, inconsistent stock availability, and higher operational costs. As a strategic supplier partner, Moglix aimed to address these issues by introducing a more efficient and technology-enabled inventory management solution.",
+          "During my tenure at Moglix, I led the implementation of a Vendor Managed Inventory (VMI) system for Maintenance, Repair and Operations (MRO) consumables at the Volvo Construction Equipment manufacturing plant in Bangalore. <br /><br/>The client’s traditional procurement system involved multiple suppliers and manual ordering processes, which resulted in longer procurement cycles, inconsistent inventory levels, and operational inefficiencies. These challenges affected production efficiency and increased administrative workload for procurement teams. <br/> <br/>To address these issues, Moglix proposed implementing a Vendor Managed Inventory (VMI) model, where frequently used consumables would be stocked directly at the customer’s location and replenished through a technology-enabled procurement platform. ",
       },
       {
         subTitle: "Project Objectives",
-        description: "The primary objectives of this project were to:",
+        description: "The key objectives of this project were:",
         descriptionList: [
-          "Streamline the procurement process for MRO consumables by implementing a VMI system.",
-          "Enhance inventory visibility and control to reduce stockouts and overstock situations.",
-          "Improve operational efficiency and reduce procurement lead times.",
-          "Foster a collaborative partnership between Moglix and Volvo CE to drive continuous improvement in supply chain management.",
+          "Improve availability of critical MRO consumables at the plant",
+          "Reduce procurement cycle time and operational inefficiencies",
+          "Consolidate supplier base and reduce procurement complexity",
+          "Implement a technology-driven inventory management system.",
+          "Strengthen strategic partnership with Volvo Construction Equipment",
         ],
       },
       {
-        subTitle: "My Role and Personal Contribution",
+        subTitle: "My Role & Contribution",
         description:
-          "As the execution lead for the VMI implementation, I played a central role in planning, coordinating, and executing the project. My responsibilities included analysing the client’s consumption patterns, identifying suitable SKUs for the VMI model, and coordinating closely with multiple stakeholders including procurement managers, plant operations teams, and internal sourcing departments. <br /><br/> I also facilitated communication between Volvo’s plant management and Moglix’s procurement and supply chain teams to ensure alignment on inventory stocking policies, service level expectations, and operational requirements. Additionally, I monitored project progress and ensured the successful deployment of the inventory system within the client’s facility. ",
+          "As the execution lead for the VMI implementation, I played a central role in planning and executing the project.",
+        descriptionList: [
+          "Analysing historical consumption data to identify high-demand SKUs",
+          "Coordinating with procurement managers, plant operations teams, and sourcing departments",
+          "Designing inventory stocking strategies based on consumption patterns",
+          "Managing supplier coordination and internal logistics teams",
+          "Ensuring successful implementation of the inventory system at the client facility",
+        ],
+        summary:
+          "This role required strong stakeholder management, strategic planning, and operational coordination across multiple teams.",
       },
       {
-        subTitle: "Approach and Strategies Implemented",
+        subTitle: "Implementation Approach",
         description:
-          "To successfully implement the VMI model, a structured and data-driven approach was adopted. The first step involved analysing historical procurement and consumption data to identify high-frequency MRO items suitable for inclusion in the VMI program. These items were categorised and prioritised based on demand patterns, criticality, and lead time considerations",
+          "The project followed a structured implementation approach:",
+
+        descriptionOrderedList: [
+          {
+            step: "Data Analysis",
+            details:
+              "Consumption patterns and procurement history were analysed to identify frequently used MRO items suitable for VMI implementation.",
+          },
+          {
+            step: "SKU Identification",
+            details:
+              "Critical SKUs were shortlisted and categorised based on demand frequency and lead times.",
+          },
+          {
+            step: "On-Site Inventory Setup",
+            details:
+              "Dedicated inventory storage was established at the client’s facility to ensure immediate availability of essential consumables.",
+          },
+          {
+            step: "Technology Integration",
+            details:
+              "The procurement and replenishment process was integrated with Moglix’s digital platform to enable real-time inventory tracking and automated restocking.",
+          },
+          {
+            step: "Supplier Consolidation",
+            details:
+              "Supplier relationships were streamlined to reduce procurement complexity and improve cost efficiency.",
+          },
+        ],
       },
       {
         subTitle: "Outcomes and Impact",
         description:
-          "The implementation of the VMI system produced several significant outcomes for both Moglix and Volvo Construction Equipment.",
+          "The VMI implementation generated several measurable benefits for both Moglix and the client. ",
+      },
+
+      {
+        subTitle: "Outcomes and Impact",
         descriptionList: [
-          "Operational Efficiency: The VMI model streamlined the procurement process, reducing manual interventions and enabling more efficient inventory management. This led to a significant reduction in procurement lead times and improved service levels.",
-          "Inventory Optimization: With enhanced visibility and control over inventory levels, Volvo CE experienced a reduction in stockouts and overstock situations. This optimization resulted in cost savings and improved operational continuity.",
-          "Strengthened Partnership: The successful implementation of the VMI system strengthened the strategic partnership between Moglix and Volvo CE, demonstrating our commitment to delivering value-added solutions that address our clients’ operational challenges.",
+          "Reduced procurement cycle times",
+          "Improved inventory availability",
+          "Reduced stock-out risks",
         ],
+      },
+      {
+        subTitle: "Business Impact",
+        descriptionList: [
+          "Increased share of wallet with Volvo Construction Equipment",
+          "Stronger strategic partnership with the client",
+          "Improved procurement efficiency and supplier management",
+        ],
+      },
+      {
+        subTitle: "Strategic Value",
+        description:
+          "The project demonstrated how technology-enabled supply chain solutions and collaborative account management can create long-term value for enterprise clients.",
       },
     ],
     skills: [
       {
-        name: "Vendor Managed Inventory (VMI)",
+        name: "Supply Chain Optimisation",
         description:
-          "Implemented a VMI system for MRO consumables at Volvo CE, streamlining procurement and improving inventory management.",
+          "Implemented a Vendor Managed Inventory (VMI) model to streamline procurement and improve inventory management for MRO consumables.",
       },
       {
-        name: "Logistics",
+        name: "Strategic Account Management",
         description:
-          "Managed the logistics aspects of the VMI implementation, ensuring smooth coordination between suppliers and clients.",
+          "Strengthened the long-term partnership with Volvo Construction Equipment by delivering a value-driven supply chain solution.",
       },
       {
-        name: "Data Analysis",
+        name: "Data-Driven Decision Making ",
         description:
-          "Conducted comprehensive data analysis to identify trends and optimize inventory levels.",
+          "Analysed consumption patterns and SKU demand to determine optimal inventory levels and stocking strategies.",
       },
       {
-        name: "Process Optimization",
+        name: "Stakeholder Collaboration",
         description:
-          "Optimized procurement and inventory management processes to improve overall efficiency.",
+          " Coordinated with cross-functional teams including procurement, plant operations, sourcing teams, and suppliers to ensure successful project execution.",
+      },
+      {
+        name: "Technology Integration",
+        description:
+          "Utilised digital procurement platforms to enable automated ordering, real-time inventory visibility, and efficient replenishment processes.",
+      },
+      {
+        name: "Operational Efficiency & Cost Reduction",
+        description:
+          "Consolidated suppliers and streamlined procurement processes to improve efficiency and reduce operational costs.",
       },
     ],
   },
