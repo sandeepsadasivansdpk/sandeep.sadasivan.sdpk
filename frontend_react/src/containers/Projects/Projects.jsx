@@ -3,9 +3,9 @@ import { motion } from "framer-motion";
 
 import { AppWrap, MotionWrap } from "../../wrapper";
 import { researchProjects as projectsData } from "../../data";
-import "./ResearchProjects.scss";
+import "./Projects.scss";
 
-const ResearchProjects = ({ isPage = false }) => {
+const Projects = ({ isPage = false }) => {
   const projects = projectsData;
 
   return (
@@ -98,10 +98,10 @@ const ResearchProjects = ({ isPage = false }) => {
   );
 };
 
-export { ResearchProjects as ResearchProjectsComponent };
+export { Projects as ProjectsComponent };
 
 export default AppWrap(
-  MotionWrap(ResearchProjects, "app__research-projects"),
-  "research-projects",
+  MotionWrap(Projects, "app__projects"),
+  "projects",
   "app__primarybg",
 );

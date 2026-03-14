@@ -30,11 +30,7 @@ const Navbar = () => {
   };
 
   const navItems = [
-    // { label: "home", path: "/" },
     { label: "about", path: "/" },
-    // { label: "work", path: "/work" },
-    // { label: "experiences", path: "/experiences" },
-    // { label: "testimonials", path: "/testimonials" },
     { label: "reflective learning", path: "/reflective-learning" },
     { label: "projects", path: "/projects" },
     { label: "professional development", path: "/professional-development" },
