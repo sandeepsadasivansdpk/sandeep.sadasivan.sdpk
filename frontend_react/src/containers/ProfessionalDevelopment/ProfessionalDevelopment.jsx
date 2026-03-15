@@ -22,96 +22,115 @@ const ProfessionalDevelopment = ({ isPage = false }) => {
         <div className="app__pd-content">
           <motion.div
             whileInView={{ opacity: [0, 1] }}
-            transition={{ duration: 1, delay: 0.8 }}
-            className="app__pd-resume"
+            transition={{ duration: 1 }}
           >
-            <p className="p-text">
-              Preview and download my complete resume to learn more about my
-              professional background, experience, and qualifications.
-            </p>
-            <div className="app__pd-cv-buttons">
-              <a
-                href="/NZ- SandeepSadasivan.docx.pdf"
-                download="NZ- SandeepSadasivan.docx.pdf"
-                className="app__pd-cv-button app__pd-cv-download"
-              >
-                Download Resume
-              </a>
-            </div>
+            <h3 className="bold-text">{pdData.title}</h3>
+            <p
+              className="p-text"
+              dangerouslySetInnerHTML={{ __html: pdData.intro }}
+            />
+          </motion.div>
+          {/* new content */}
 
-            {showPreview && (
-              <motion.div
-                initial={{ opacity: 0, height: 0 }}
-                animate={{ opacity: 1, height: "auto" }}
-                exit={{ opacity: 0, height: 0 }}
-                transition={{ duration: 0.5 }}
-                className="app__pd-resume-preview"
-              >
-                <iframe
-                  src="/NZ- SandeepSadasivan.docx.pdf"
-                  width="100%"
-                  height="600px"
-                  style={{ border: "none", borderRadius: "0.5rem" }}
-                  title="Resume Preview"
-                />
-              </motion.div>
-            )}
+          <motion.div
+            whileInView={{ opacity: [0, 1] }}
+            transition={{ duration: 1, delay: 0.2 }}
+            className="app__pd-courses"
+          >
+            <h3 className="bold-text">Personal Learning Goals</h3>
+
+            <div className="app__pd-courses-list">
+              {pdData?.personalLearningGoals?.length > 0 &&
+                pdData.personalLearningGoals.map((goal, index) => (
+                  <div key={index} className="app__pd-course-item">
+                    <h4 className="bold-text">
+                      {index + 1}. {goal.subTitle}
+                    </h4>
+                    <p
+                      className="p-text"
+                      dangerouslySetInnerHTML={{ __html: goal.description }}
+                    />
+                    <h5 className="bold-text">Action Plan:</h5>
+                    <ul>
+                      {goal.actionPlan.map((action, idx) => (
+                        <li key={idx} className="p-text">
+                          {action}
+                        </li>
+                      ))}
+                    </ul>
+                    <h5 className="bold-text">Measurement:</h5>
+                    <ul>
+                      {goal.measurement.map((measure, idx) => (
+                        <li key={idx} className="p-text">
+                          {measure}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                ))}
+            </div>
           </motion.div>
           <motion.div
             whileInView={{ opacity: [0, 1] }}
-            transition={{ duration: 1 }}
+            transition={{ duration: 1, delay: 0.2 }}
+            className="app__pd-courses"
           >
-            <h3 className="bold-text">Continuous Learning</h3>
-            <p className="p-text">{pdData.intro}</p>
+            <h3 className="bold-text">Professional Learning Goals</h3>
+            <div className="app__pd-courses-list">
+              {pdData?.professionalLearningGoals?.length > 0 &&
+                pdData.professionalLearningGoals.map((goal, index) => (
+                  <div key={index} className="app__pd-course-item">
+                    <h4 className="bold-text">
+                      {index + 1}. {goal.subTitle}
+                    </h4>
+                    <p
+                      className="p-text"
+                      dangerouslySetInnerHTML={{ __html: goal.description }}
+                    />
+                    <h5 className="bold-text">Action Plan:</h5>
+                    <ul>
+                      {goal.actionPlan.map((action, idx) => (
+                        <li key={idx} className="p-text">
+                          {action}
+                        </li>
+                      ))}
+                    </ul>
+                    <h5 className="bold-text">Measurement:</h5>
+                    <ul>
+                      {goal.measurement.map((measure, idx) => (
+                        <li key={idx} className="p-text">
+                          {measure}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                ))}
+            </div>
           </motion.div>
+          <motion.div
+            whileInView={{ opacity: [0, 1] }}
+            transition={{ duration: 1, delay: 0.8 }}
+            className="app__pd-resume"
+          >
+            {showPreview && (
+              <>
+                <h3 className="bold-text">Curriculum Vitae</h3>
 
-          {isPage && (
-            <>
-              <motion.div
-                whileInView={{ opacity: [0, 1] }}
-                transition={{ duration: 1, delay: 0.4 }}
-                className="app__pd-courses"
-              >
-                <h3 className="bold-text">Courses & Certifications</h3>
-                <div className="app__pd-courses-list">
-                  {pdData.courses.map((course, index) => (
-                    <div key={index} className="app__pd-course-item">
-                      <h4 className="bold-text">{course.title}</h4>
-                      <p className="p-text">
-                        <span className="app__pd-provider">
-                          {course.provider}
-                        </span>{" "}
-                        - {course.year}
-                      </p>
-                      <p className="p-text">{course.description}</p>
-                    </div>
-                  ))}
-                </div>
-              </motion.div>
-
-              <motion.div
-                whileInView={{ opacity: [0, 1] }}
-                transition={{ duration: 1, delay: 0.6 }}
-                className="app__pd-workshops"
-              >
-                <h3 className="bold-text">Workshops & Training</h3>
-                <div className="app__pd-workshops-list">
-                  {pdData.workshops.map((workshop, index) => (
-                    <div key={index} className="app__pd-workshop-item">
-                      <h4 className="bold-text">{workshop.title}</h4>
-                      <p className="p-text">
-                        <span className="app__pd-provider">
-                          {workshop.provider}
-                        </span>{" "}
-                        - {workshop.year}
-                      </p>
-                      <p className="p-text">{workshop.description}</p>
-                    </div>
-                  ))}
-                </div>
-              </motion.div>
-            </>
-          )}
+                <motion.div
+                  initial={{ opacity: 0, height: 0 }}
+                  animate={{ opacity: 1, height: "auto" }}
+                  exit={{ opacity: 0, height: 0 }}
+                  transition={{ duration: 0.1 }}
+                  className="app__pd-resume-preview"
+                >
+                  <div className="app__pd-resume-images">
+                    <img src="CV1.png" alt="Resume Preview" />
+                    <img src="CV2.png" alt="Resume Preview" />
+                  </div>
+                </motion.div>
+              </>
+            )}
+          </motion.div>
         </div>
       </div>
     </>
