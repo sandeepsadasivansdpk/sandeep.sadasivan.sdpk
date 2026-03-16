@@ -13,10 +13,10 @@ const researchProjects = [
         subTitle: "Project Objectives",
         description: "The primary objectives of this project were to:",
         descriptionList: [
-          "Streamline the procurement process for MRO consumables by implementing a VMI system.",
-          "Enhance inventory visibility and control to reduce stockouts and overstock situations.",
-          "Improve operational efficiency and reduce procurement lead times.",
-          "Foster a collaborative partnership between Moglix and Volvo CE to drive continuous improvement in supply chain management.",
+          "Improve inventory availability and reduce stock-outs for critical MRO consumables used in plant operations",
+          "Reduce procurement cycle time by implementing a streamlined and technology-enabled ordering process.",
+          "Consolidate the supplier base to improve cost efficiency and procurement transparency.",
+          "Strengthen Moglix’s strategic partnership with Volvo Construction Equipment while increasing the companies share of wallet within the client organisation.",
         ],
       },
       {
