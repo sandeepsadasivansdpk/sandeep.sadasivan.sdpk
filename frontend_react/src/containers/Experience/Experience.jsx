@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Tooltip as ReactTooltip } from "react-tooltip";
-import { useNavigate } from "react-router-dom";
 
 import { AppWrap, MotionWrap } from "../../wrapper";
 import { urlFor } from "../../utils";
@@ -14,7 +13,6 @@ import "./Skills.scss";
 const Experience = ({ isPage = false }) => {
   const [skills, setSkills] = useState([]);
   const [experience, setExperience] = useState();
-  const navigate = useNavigate();
 
   const skillVariants = {
     view: {
@@ -107,7 +105,6 @@ const Experience = ({ isPage = false }) => {
                       className="app__skills-exp-work"
                       data-tip
                       data-for={work.name}
-                      onClick={() => !isPage && navigate("/experiences")}
                     >
                       <h4 className="bold-text">{work.name}</h4>
                       <p className="p-text">{work.company}</p>

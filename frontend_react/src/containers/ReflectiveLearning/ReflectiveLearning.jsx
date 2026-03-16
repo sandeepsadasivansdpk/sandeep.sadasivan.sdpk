@@ -24,22 +24,52 @@ const ReflectiveLearning = ({ isPage = false }) => {
             transition={{ duration: 1 }}
           >
             <h3 className="bold-text">Professional Development</h3>
-            <p className="p-text">{reflectiveData.intro}</p>
           </motion.div>
 
           {isPage && (
-            <motion.div
-              whileInView={{ opacity: [0, 1] }}
-              transition={{ duration: 1, delay: 0.2 }}
-              className="app__reflective-details"
-            >
-              <h3 className="bold-text">Key Learning Areas</h3>
-              <ul className="p-text">
-                {reflectiveData.keyAreas.map((k) => (
-                  <li key={k}>{k}</li>
-                ))}
-              </ul>
-            </motion.div>
+            <>
+              <motion.div
+                whileInView={{ opacity: [0, 1] }}
+                transition={{ duration: 1, delay: 0.2 }}
+                className="app__pd-courses"
+              >
+                <div className="app__pd-courses-list">
+                  {reflectiveData?.posts?.length > 0 &&
+                    reflectiveData.posts.map((post, index) => (
+                      <div key={index} className="app__pd-course-item">
+                        <h4 className="bold-text">{post.title}</h4>
+                        <p className="p-text">
+                          <span className="app__pd-provider">
+                            {post.provider}
+                          </span>{" "}
+                          - {post.year}
+                        </p>
+                        <p
+                          className="p-text"
+                          dangerouslySetInnerHTML={{ __html: post.description }}
+                        />
+                      </div>
+                    ))}
+                </div>
+              </motion.div>
+              {reflectiveData.peerLearningData && (
+                <motion.div
+                  whileInView={{ opacity: [0, 1] }}
+                  transition={{ duration: 1, delay: 0.2 }}
+                  className="app__reflective-details"
+                >
+                  <h3 className="bold-text">
+                    {reflectiveData.peerLearningData.title}
+                  </h3>
+                  <p
+                    className="p-text"
+                    dangerouslySetInnerHTML={{
+                      __html: reflectiveData.peerLearningData.content,
+                    }}
+                  />
+                </motion.div>
+              )}
+            </>
           )}
         </div>
       </div>

@@ -3,12 +3,8 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import {
   AboutPage,
-  WorkPage,
-  ExperiencePage,
-  TestimonialPage,
-  ContactPage,
   ReflectiveLearningPage,
-  ResearchProjectsPage,
+  ProjectsPage,
   ProfessionalDevelopmentPage,
 } from "./pages";
 
@@ -20,17 +16,12 @@ const App = () => {
     <Router>
       <Routes>
         <Route element={<Layout />}>
-          {/* <Route path="/" element={<HomePage />} /> */}
           <Route path="/" element={<AboutPage />} />
-          <Route path="/work" element={<WorkPage />} />
-          <Route path="/experiences" element={<ExperiencePage />} />
-          <Route path="/testimonials" element={<TestimonialPage />} />
-          <Route path="/contact" element={<ContactPage />} />
           <Route
             path="/reflective-learning"
             element={<ReflectiveLearningPage />}
           />
-          <Route path="/projects" element={<ResearchProjectsPage />} />
+          <Route path="/projects" element={<ProjectsPage />} />
           <Route
             path="/professional-development"
             element={<ProfessionalDevelopmentPage />}
