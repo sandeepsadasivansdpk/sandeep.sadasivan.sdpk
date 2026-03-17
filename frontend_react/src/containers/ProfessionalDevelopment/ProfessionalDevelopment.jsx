@@ -6,7 +6,15 @@ import { professionalDevelopment as pdData } from "../../data";
 import "./ProfessionalDevelopment.scss";
 
 const ProfessionalDevelopment = ({ isPage = false }) => {
+  const [expandedItems, setExpandedItems] = useState({});
   const [showPreview, setShowPreview] = useState(true);
+  const toggleExpanded = (idx) => {
+    setExpandedItems((prev) => ({
+      ...prev,
+      [idx]: !prev[idx],
+    }));
+  };
+
   return (
     <>
       <h2
@@ -24,7 +32,7 @@ const ProfessionalDevelopment = ({ isPage = false }) => {
             whileInView={{ opacity: [0, 1] }}
             transition={{ duration: 1 }}
           >
-            <h3 className="bold-text">{pdData.title}</h3>
+            <h3>{pdData.title}</h3>
             <p
               className="p-text"
               dangerouslySetInnerHTML={{ __html: pdData.intro }}
@@ -37,7 +45,7 @@ const ProfessionalDevelopment = ({ isPage = false }) => {
             transition={{ duration: 1, delay: 0.2 }}
             className="app__pd-courses"
           >
-            <h3 className="bold-text">Personal Learning Goals</h3>
+            <h3>Personal Learning Goals</h3>
 
             <div className="app__pd-courses-list">
               {pdData?.personalLearningGoals?.length > 0 &&
@@ -47,9 +55,17 @@ const ProfessionalDevelopment = ({ isPage = false }) => {
                       {index + 1}. {goal.subTitle}
                     </h4>
                     <p
-                      className="p-text"
+                      className={`p-text ${
+                        expandedItems[index] ? "expanded" : "truncated"
+                      }`}
                       dangerouslySetInnerHTML={{ __html: goal.description }}
                     />
+                    <button
+                      className="app__pd-see-more"
+                      onClick={() => toggleExpanded(index)}
+                    >
+                      {expandedItems[index] ? "See less" : "See more"}
+                    </button>
                     <h5 className="bold-text">Action Plan:</h5>
                     <ul>
                       {goal.actionPlan.map((action, idx) => (
@@ -84,9 +100,20 @@ const ProfessionalDevelopment = ({ isPage = false }) => {
                       {index + 1}. {goal.subTitle}
                     </h4>
                     <p
-                      className="p-text"
+                      className={`p-text ${
+                        expandedItems[`prof-${index}`]
+                          ? "expanded"
+                          : "truncated"
+                      }`}
                       dangerouslySetInnerHTML={{ __html: goal.description }}
                     />
+                    <button
+                      type="button"
+                      className="app__pd-see-more"
+                      onClick={() => toggleExpanded(`prof-${index}`)}
+                    >
+                      {expandedItems[`prof-${index}`] ? "See less" : "See more"}
+                    </button>
                     <h5 className="bold-text">Action Plan:</h5>
                     <ul>
                       {goal.actionPlan.map((action, idx) => (
@@ -107,30 +134,20 @@ const ProfessionalDevelopment = ({ isPage = false }) => {
                 ))}
             </div>
           </motion.div>
-          <motion.div
-            whileInView={{ opacity: [0, 1] }}
-            transition={{ duration: 1, delay: 0.8 }}
-            className="app__pd-resume"
-          >
+          <div className="app__pd-resume">
             {showPreview && (
               <>
                 <h3 className="bold-text">Curriculum Vitae</h3>
 
-                <motion.div
-                  initial={{ opacity: 0, height: 0 }}
-                  animate={{ opacity: 1, height: "auto" }}
-                  exit={{ opacity: 0, height: 0 }}
-                  transition={{ duration: 0.1 }}
-                  className="app__pd-resume-preview"
-                >
+                <div className="app__pd-resume-preview">
                   <div className="app__pd-resume-images">
                     <img src="CV1.png" alt="Resume Preview" />
                     <img src="CV2.png" alt="Resume Preview" />
                   </div>
-                </motion.div>
+                </div>
               </>
             )}
-          </motion.div>
+          </div>
         </div>
       </div>
     </>

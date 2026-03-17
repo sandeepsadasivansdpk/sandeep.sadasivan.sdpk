@@ -45,9 +45,13 @@
 .app__pd-workshops {
   .app__pd-courses-list,
   .app__pd-workshops-list {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     gap: 1.5rem;
+
+    @media screen and (max-width: 768px) {
+      grid-template-columns: 1fr;
+    }
   }
 
   .app__pd-course-item,
@@ -77,9 +81,44 @@
       margin: 0.5rem 0;
       text-align: left;
     }
+
+    .truncated {
+      display: -webkit-box;
+      -webkit-line-clamp: 4;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+
+    .expanded {
+      display: block;
+    }
+
+    .app__pd-see-more {
+      display: inline-block;
+      margin-top: 0.5rem;
+      margin-bottom: 1rem;
+      background: transparent;
+      border: none;
+      color: var(--secondary-color);
+      font-weight: 600;
+      cursor: pointer;
+      padding: 0;
+      text-align: right;
+      width: 100%;
+    }
+    ul {
+      li {
+        margin: 0.5rem 0;
+      }
+    }
   }
 
   @media screen and (max-width: 768px) {
+    .app__pd-courses-list,
+    .app__pd-workshops-list {
+      grid-template-columns: 1fr;
+    }
+
     .app__pd-course-item,
     .app__pd-workshop-item {
       padding: 1rem;
@@ -105,6 +144,7 @@
     margin-right: auto;
   }
 
+  .app__pd-resume-actions,
   .app__pd-cv-buttons {
     display: flex;
     justify-content: center;
@@ -141,8 +181,14 @@
       color: var(--secondary-color);
     }
   }
+  .app__pd-resume-images {
+    img {
+      width: 100% !important;
+    }
+  }
 
   @media screen and (max-width: 768px) {
+    .app__pd-resume-actions,
     .app__pd-cv-buttons {
       flex-direction: column;
       align-items: center;
@@ -173,6 +219,12 @@
       iframe {
         height: 400px;
       }
+    }
+  }
+
+  .app__pd-resume-images {
+    img {
+      width: 270px;
     }
   }
 }

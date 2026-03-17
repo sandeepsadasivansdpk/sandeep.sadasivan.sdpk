@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { HiChevronLeft, HiChevronRight } from "react-icons/hi";
+import { useLocation } from "react-router-dom";
 
 import { AppWrap, MotionWrap } from "../../wrapper";
 import { urlFor } from "../../utils";
@@ -11,6 +12,7 @@ import {
 import "./Testimonial.scss";
 
 const Testimonial = () => {
+  const location = useLocation();
   const [testimonials, setTestimonials] = useState([]);
   const [brands, setBrands] = useState([]);
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -77,18 +79,20 @@ const Testimonial = () => {
         </>
       )}
 
-      <div className="app__testimonials-brands app__flex">
-        {brands.map((brand) => (
-          <motion.div
-            whileInView={{ opacity: [0, 1] }}
-            transition={{ duration: 0.5, type: "tween" }}
-            key={brand._id}
-            onClick={() => handleCompanyImageClick(brand.url)}
-          >
-            <img src={urlFor(brand.icon)} alt={brand.name} />
-          </motion.div>
-        ))}
-      </div>
+      {location.pathname === "/" && (
+        <div className="app__testimonials-brands app__flex">
+          {brands.map((brand) => (
+            <motion.div
+              whileInView={{ opacity: [0, 1] }}
+              transition={{ duration: 0.5, type: "tween" }}
+              key={brand._id}
+              onClick={() => handleCompanyImageClick(brand.url)}
+            >
+              <img src={urlFor(brand.icon)} alt={brand.name} />
+            </motion.div>
+          ))}
+        </div>
+      )}
     </>
   );
 };
