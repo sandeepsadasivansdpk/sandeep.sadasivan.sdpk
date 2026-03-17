@@ -58,7 +58,7 @@ const ReflectiveLearning = ({ isPage = false }) => {
             whileInView={{ opacity: [0, 1] }}
             transition={{ duration: 1 }}
           >
-            <h2 className="">Professional Development</h2>
+            <h2 className="">Reflective Learning Posts</h2>
           </motion.div>
 
           {isPage && (
@@ -72,13 +72,10 @@ const ReflectiveLearning = ({ isPage = false }) => {
                   {reflectiveData?.posts?.length > 0 &&
                     reflectiveData.posts.map((post, index) => (
                       <div key={index} className="app__reflective-post-item">
-                        <h4 className="bold-text">{post.title}</h4>
-                        {/* <p className="p-text">
-                          <span className="app__reflective-provider">
-                            {post.provider}
-                          </span>{" "}
-                          - {post.year}
-                        </p> */}
+                        <h4 className="bold-text">
+                          {`Post ${index + 1}`} - {post.title}
+                        </h4>
+
                         <div className="app__reflective-post-description">
                           <p
                             className="p-text"
