@@ -32,7 +32,7 @@ const ProfessionalDevelopment = ({ isPage = false }) => {
             whileInView={{ opacity: [0, 1] }}
             transition={{ duration: 1 }}
           >
-            <h3>{pdData.title}</h3>
+            <h2 style={{ marginBottom: "1rem" }}>{pdData.title}</h2>
             <div className="app__pd-intro">
               <p
                 className="p-text"
@@ -46,7 +46,7 @@ const ProfessionalDevelopment = ({ isPage = false }) => {
             transition={{ duration: 1, delay: 0.2 }}
             className="app__pd-courses"
           >
-            <h3>Personal Learning Goals</h3>
+            <h2 style={{ marginBottom: "1rem" }}>Personal Learning Goals</h2>
 
             <div className="app__pd-courses-list">
               {pdData?.personalLearningGoals?.length > 0 &&
@@ -92,7 +92,9 @@ const ProfessionalDevelopment = ({ isPage = false }) => {
             transition={{ duration: 1, delay: 0.2 }}
             className="app__pd-courses"
           >
-            <h3 className="bold-text">Professional Learning Goals</h3>
+            <h2 style={{ marginBottom: "1rem" }}>
+              Professional Learning Goals
+            </h2>
             <div className="app__pd-courses-list">
               {pdData?.professionalLearningGoals?.length > 0 &&
                 pdData.professionalLearningGoals.map((goal, index) => (
@@ -138,7 +140,9 @@ const ProfessionalDevelopment = ({ isPage = false }) => {
           <div className="app__pd-resume">
             {showPreview && (
               <>
-                <h3 className="bold-text">Curriculum Vitae</h3>
+                <h2 style={{ marginBottom: "1rem", textAlign: "left" }}>
+                  Curriculum Vitae
+                </h2>
 
                 <div className="app__pd-resume-preview">
                   <div className="app__pd-resume-images">
