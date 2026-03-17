@@ -144,6 +144,16 @@ const ProfessionalDevelopment = ({ isPage = false }) => {
                   Curriculum Vitae
                 </h2>
 
+                <div className="app__pd-cv-buttons">
+                  <a
+                    href="/NZ- SandeepSadasivan.pdf"
+                    download="NZ- SandeepSadasivan.pdf"
+                    className="app__pd-cv-button app__pd-cv-download"
+                  >
+                    Download Resume
+                  </a>
+                </div>
+
                 <div className="app__pd-resume-preview">
                   <div className="app__pd-resume-images">
                     <img src="CV1.png" alt="Resume Preview" />
