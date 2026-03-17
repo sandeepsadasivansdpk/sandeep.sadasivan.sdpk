@@ -33,12 +33,13 @@ const ProfessionalDevelopment = ({ isPage = false }) => {
             transition={{ duration: 1 }}
           >
             <h3>{pdData.title}</h3>
-            <p
-              className="p-text"
-              dangerouslySetInnerHTML={{ __html: pdData.intro }}
-            />
+            <div className="app__pd-intro">
+              <p
+                className="p-text"
+                dangerouslySetInnerHTML={{ __html: pdData.intro }}
+              />
+            </div>
           </motion.div>
-          {/* new content */}
 
           <motion.div
             whileInView={{ opacity: [0, 1] }}
